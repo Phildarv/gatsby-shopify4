@@ -11,10 +11,19 @@ module.exports = {
     siteImage: "/default-og-image.jpg",
     twitter: "@gatsbyjs",
   },
-  module.exports = {
-  // ...
+  
+  flags: {
+    FAST_DEV: true,
+  },
   plugins: [
     {
+      resolve: "gatsby-source-shopify",
+      options: {
+        password: process.env.SHOPIFY_SHOP_PASSWORD,
+        storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
+        shopifyConnections: ["collections"],
+      },
+       {
       resolve: '@plasmicapp/loader-gatsby',
       options: {
         projects: [
@@ -28,19 +37,6 @@ module.exports = {
         preview: true
       }
     }
-  ]
-};
-  flags: {
-    FAST_DEV: true,
-  },
-  plugins: [
-    {
-      resolve: "gatsby-source-shopify",
-      options: {
-        password: process.env.SHOPIFY_SHOP_PASSWORD,
-        storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
-        shopifyConnections: ["collections"],
-      },
     },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
