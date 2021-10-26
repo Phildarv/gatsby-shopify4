@@ -11,6 +11,25 @@ module.exports = {
     siteImage: "/default-og-image.jpg",
     twitter: "@gatsbyjs",
   },
+  module.exports = {
+  // ...
+  plugins: [
+    {
+      resolve: '@plasmicapp/loader-gatsby',
+      options: {
+        projects: [
+          {
+            id: 'bL97kH9Dzecu8g2MxMGBSt', // ID of a project you are using
+            token: 'PW1LUcIEsp14QbhHTd8Bjh3tS9nprRNJBMbLD7mTTqsVOSGNmKRWjlDnpR4NnGNGNMS8pAk18OZJp5iJ2VhQ' // API token for that project
+          }
+        ],
+        // Fetches the latest revisions, whether or not they were unpublished!
+        // Disable for production to ensure you render only published changes.
+        preview: true
+      }
+    }
+  ]
+};
   flags: {
     FAST_DEV: true,
   },
