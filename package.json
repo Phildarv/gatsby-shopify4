@@ -20,6 +20,8 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@plasmicapp/cli": "^0.1.166",
+    "@plasmicapp/react-web": "^0.2.89",
     "@sindresorhus/slugify": "^1.1.0",
     "debounce": "^1.2.1",
     "dotenv": "^10.0.0",
