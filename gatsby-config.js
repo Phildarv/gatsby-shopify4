@@ -37,7 +37,7 @@ module.exports = {
         preview: true
       }
   
-    },
+    
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
